@@ -10,7 +10,7 @@ export class AppComponent {
   password: string = '';
   state: string = 'empty'
   passwordStrength: string = '';
-  messege: string = ''
+  message: string = ''
 
   calculatePasswordStrength() {
     if(this.password.length === 0){
@@ -18,17 +18,17 @@ export class AppComponent {
       this.passwordStrength = '';
     }else if (this.password.length < 8) {
       this.state = 'small';
-      this.messege = 'Your password is too small! Write at least 8 character!'
+      this.message = 'Your password is too small! Write at least 8 character!'
     }else {
       this.state = 'valid'
       this.passwordStrength = 'easy'
-      this.changeMessege(this.password)
+      this.changeMessage(this.password)
       if (!this.containsOnlyLettersDigitsSymbols(this.password)) {
         this.passwordStrength = 'medium';
       }
       if (this.containsCombination(this.password)) {
         this.passwordStrength = 'strong';
-        this.messege = 'Success! Your password is strong!!!'
+        this.message = 'Success! Your password is strong!!!'
       }
     }
   }
@@ -37,15 +37,15 @@ export class AppComponent {
     let regex = /^[0-9]+$()|(^[a-zA-Z]+$)|(^[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]+$)/
     return regex.test(password);
   }
-  changeMessege(password: string){
+  changeMessage(password: string){
     if(/^[0-9]+$/.test(password)){
-      this.messege = 'Try to add letters and symbols!'
+      this.message = 'Try to add letters and symbols!'
     }else if(/^[a-zA-Z]+$/.test(password)){
-      this.messege = 'Try to add number and symbols!'
+      this.message = 'Try to add number and symbols!'
     }else if(/^[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]+$/.test(password)){
-      this.messege = 'Try to add numbers and letters!'
+      this.message = 'Try to add numbers and letters!'
     }else {
-      this.messege = 'Try to add missing letters, numbers or symbols!'
+      this.message = 'Try to add missing letters, numbers or symbols!'
     }
   }
 

@@ -2,14 +2,14 @@
   <div class="password-box">
     <h2>Enter your password:</h2>
     <input type="password" [(ngModel)]="password" (input)="calculatePasswordStrength()" id="password">
-<p>{{messege}}</p>
     <div class="password-color-box">
       <div class="strength-section {{state}}"
-        [ngClass]="{'red': passwordStrength === 'easy', 'yellow': passwordStrength === 'medium','green': passwordStrength === 'strong'}">
-      </div>
-      <div class="strength-section {{state}}"
-        [ngClass]="{'yellow': passwordStrength === 'medium','green': passwordStrength === 'strong'}"></div>
-      <div class="strength-section {{state}}" [ngClass]="{'green': passwordStrength === 'strong'}"></div>
+      [ngClass]="{'red': passwordStrength === 'easy', 'yellow': passwordStrength === 'medium','green': passwordStrength === 'strong'}">
     </div>
+    <div class="strength-section {{state}}"
+    [ngClass]="{'yellow': passwordStrength === 'medium','green': passwordStrength === 'strong'}"></div>
+    <div class="strength-section {{state}}" [ngClass]="{'green': passwordStrength === 'strong'}"></div>
+    <p class="password-message">{{message}}</p>
+  </div>
   </div>
 </div>

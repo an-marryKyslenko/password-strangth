@@ -6,6 +6,11 @@
   align-items: center;
   color:rgb(255, 255, 255);
 }
+.password-message{
+  width: 160px;
+  font-size: 14px;
+  margin: 0;
+}
 
 .password-box{
   background-color: rgb(120, 66, 110);
@@ -14,6 +19,7 @@
   border-radius: 10px;
   text-align: center;
   box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.442);
+  transition: all 0.7s;
 }
 #password{
   padding: 10px 20px;
@@ -26,12 +32,14 @@
 .password-color-box{
   display: flex;
   margin: 25px 0 0;
+  display: flex;
   align-items: center;
+  gap: 10px;
 }
 .strength-section {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
   border-radius: 5px;
 }
 
