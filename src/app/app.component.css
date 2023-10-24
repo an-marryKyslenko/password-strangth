@@ -1,0 +1,57 @@
+.password-container{
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:rgb(255, 255, 255);
+}
+
+.password-box{
+  background-color: rgb(120, 66, 110);
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.442);
+}
+#password{
+  padding: 10px 20px;
+  width: 250px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 20px;
+  border: none;
+}
+.password-color-box{
+  display: flex;
+  margin: 25px 0 0;
+  align-items: center;
+}
+.strength-section {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.empty{
+  background-color: gray;
+}
+
+.small{
+  background-color: red;
+}
+.valid{
+  background-color: grey;
+}
+.valid.red{
+  background-color: red;
+}
+.valid.yellow {
+  background-color: yellow;
+}
+
+.valid.green {
+  background-color: green;
+}
