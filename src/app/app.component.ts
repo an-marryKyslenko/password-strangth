@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent {
       this.passwordStrength = '';
     }else if (this.password.length < 8) {
       this.state = 'small';
-      this.messege = 'Your password too small! Write at least 8 char'
+      this.messege = 'Your password is too small! Write at least 8 character!'
     }else {
       this.state = 'valid'
       this.passwordStrength = 'easy'
@@ -39,13 +39,13 @@ export class AppComponent {
   }
   changeMessege(password: string){
     if(/^[0-9]+$/.test(password)){
-      this.messege = 'Try to add letters and digits!'
+      this.messege = 'Try to add letters and symbols!'
     }else if(/^[a-zA-Z]+$/.test(password)){
-      this.messege = 'Try to add number and digits!'
+      this.messege = 'Try to add number and symbols!'
     }else if(/^[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]+$/.test(password)){
       this.messege = 'Try to add numbers and letters!'
     }else {
-      this.messege = 'Try to add missing leters, number or digints!'
+      this.messege = 'Try to add missing letters, numbers or symbols!'
     }
   }
 
